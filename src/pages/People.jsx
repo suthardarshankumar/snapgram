@@ -2,7 +2,7 @@ import React from 'react'
 
 const People = () => {
     return (
-        <div>People</div>
+        <div className='text-slate-50'>People</div>
     )
 }
 
