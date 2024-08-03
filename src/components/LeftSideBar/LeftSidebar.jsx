@@ -17,34 +17,34 @@ const LeftSidebar = () => {
 
     const SidebarIcons = [
         {
-            icon: HomeOutlinedIcon,
+            icon: <HomeOutlinedIcon />,
             iconName: "Home",
             path: "/"
         },
         {
-            icon: ExploreOutlinedIcon,
+            icon: <ExploreOutlinedIcon />,
             iconName: "Explore",
             path: "/explore"
         },
         {
-            icon: PeopleOutlinedIcon,
+            icon: <PeopleOutlinedIcon />,
             iconName: "People",
             path: "/people"
         },
         {
-            icon: BookmarkBorderOutlinedIcon,
+            icon: <BookmarkBorderOutlinedIcon />,
             iconName: "Saved",
             path: "/saved"
         },
         {
-            icon: AddBoxOutlinedIcon,
+            icon: <AddBoxOutlinedIcon />,
             iconName: "Create Post",
             path: "/create-post"
         }
     ];
 
     return (
-        <div className='p-5 box-border bg-[#171717] text-slate-100 w-full min-h-full'>
+        <div className='p-5 box-border bg-[#171717] text-slate-100 w-full h-screen'>
             <div className='mt-5 -ml-8'>
                 <NavLink to="/">
                     <img src={logo}
@@ -53,11 +53,11 @@ const LeftSidebar = () => {
                     />
                 </NavLink>
             </div>
-            <div className='w-full'>
+            <div className='w-full mt-11'>
                 <UserCard
                     img={profileImg}
                     name="S D"
-                    username="@sd58"
+                    username="sd58"
                 />
             </div>
             <div className='w-full mt-10 px-[6px]'>
@@ -70,12 +70,7 @@ const LeftSidebar = () => {
                         }
                     >
                         <div>
-                            <icons.icon
-                                sx={{
-                                    fontSize: 32,
-                                    transition: "0.5s",
-                                }}
-                            />
+                            {icons.icon}
                         </div>
                         <div className='text-slate-50 flex items-center'>{icons.iconName}</div>
                     </NavLink>
