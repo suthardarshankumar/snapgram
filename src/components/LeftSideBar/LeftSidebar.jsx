@@ -1,10 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
-// Components
 import { UserCard } from '../index';
-
-// Logo and images
 import logo from '../../assets/Logo/logo.svg';
 import profileImg from '../../assets/User/MainUserProfile.jpg';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
@@ -14,7 +10,6 @@ import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlin
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
 
 const LeftSidebar = () => {
-
     const SidebarIcons = [
         {
             icon: <HomeOutlinedIcon />,

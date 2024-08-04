@@ -16,8 +16,17 @@ const PostCard = ({
     likeNo,
     like,
     id,
+    saved
 }) => {
-    const { updateLike } = usePost();
+    const { updateLike, addSave, deleteSave } = usePost();
+
+    const handleSaveClick = () => {
+        if (saved) {
+            deleteSave(id);
+        } else {
+            addSave({ id, name, username, profilePic, caption, tags, photo, likeNo, like });
+        }
+    };
 
     return (
         <div className='p-7 mt-12 rounded-3xl border-[#efefef] bg-[#171717]'>
@@ -51,7 +60,17 @@ const PostCard = ({
                     <span className='ml-1'>{likeNo}</span>
                 </div>
                 <div>
-                    <BookmarkBorderOutlinedIcon />
+                    {saved ? (
+                        <BookmarkIcon
+                            onClick={handleSaveClick}
+                            className='text-[#877eff] cursor-pointer'
+                        />
+                    ) : (
+                        <BookmarkBorderOutlinedIcon
+                            onClick={handleSaveClick}
+                            className='cursor-pointer'
+                        />
+                    )}
                 </div>
             </div>
         </div>

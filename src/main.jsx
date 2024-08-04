@@ -7,10 +7,10 @@ import { PostProvider } from './context/PostContext';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <PostProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <PostProvider>
         <App />
-      </BrowserRouter>
-    </PostProvider>
+      </PostProvider>
+    </BrowserRouter>
   </React.StrictMode>,
 );

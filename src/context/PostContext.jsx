@@ -10,6 +10,7 @@ export const usePost = () => {
 export const PostProvider = ({ children }) => {
     const [userData, setUserData] = useState(usersData);
     const [posts, setPosts] = useState(postsData);
+    const [savedPosts, setSavedPosts] = useState([]);
 
     const updateLike = (id) => {
         setPosts(posts.map((post) => {
@@ -24,8 +25,18 @@ export const PostProvider = ({ children }) => {
         }));
     };
 
+    const addSave = (post) => {
+        setSavedPosts([...savedPosts, post]);
+        setPosts(posts.map((p) => p.id === post.id ? { ...p, saved: true } : p));
+    };
+
+    const deleteSave = (id) => {
+        setSavedPosts(savedPosts.filter((post) => post.id !== id));
+        setPosts(posts.map((p) => p.id === id ? { ...p, saved: false } : p));
+    };
+
     return (
-        <PostContext.Provider value={{ userData, posts, updateLike }}>
+        <PostContext.Provider value={{ userData, posts, updateLike, savedPosts, addSave, deleteSave }}>
             {children}
         </PostContext.Provider>
     );

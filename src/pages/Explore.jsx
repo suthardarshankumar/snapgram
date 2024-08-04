@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { PostList } from '../components/index';
 
 const Explore = () => {
     return (
-        <div className='text-slate-50'>Explore</div>
-    )
-}
+        <div>
+            <PostList />
+        </div>
+    );
+};
 
-export default Explore
+export default Explore;

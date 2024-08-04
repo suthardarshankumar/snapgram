@@ -1,9 +1,52 @@
-import React from 'react'
+import React from 'react';
+import { usePost } from '../context/PostContext';
+import { PostList } from '../components/index';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 
-const Saved = () => {
-    return (
-        <div className='text-slate-50'>Saved</div>
-    )
+function srcset(image, size, rows = 1, cols = 1) {
+    return {
+        src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
+        srcSet: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format&dpr=2 2x`,
+    };
 }
 
-export default Saved
+const Saved = () => {
+    const { savedPosts } = usePost();
+
+    return (
+        <div
+            className='w-full p-5 overflow-y-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#877eff] scrollbar-thumb-rounded-full'>
+            <div className='mt-8 ml-5'>
+                <h2 className='text-4xl text-slate-50'>
+                    All Saved Posts
+                </h2>
+            </div>
+            <div className='w-full'>
+                <ImageList
+                    sx={{ width: "100%", height: "auto", overflow: "hidden" }}
+                    variant="quilted"
+                    cols={4}
+                    rowHeight={330}
+                >
+                    {[...savedPosts].reverse().map((post) => (
+                        <ImageListItem key={post.id} cols={1} rows={1} sx={{
+                            width: "100%", height: "100%", "&:hover": {
+                                cursor: "pointer"
+                            }
+                        }}>
+                            <img
+                                {...srcset(post.photo, 330)}
+                                alt={post.caption}
+                                loading="lazy"
+                                className='w-full h-full object-contain'
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList>
+            </div>
+        </div>
+    );
+};
+
+export default Saved;

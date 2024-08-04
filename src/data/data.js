@@ -87,6 +87,7 @@ export const postsData = [
         photo: AnimalsWOS,
         likeNo: 172,
         like: false,
+        saved: false,
     },
     {
         id: 1722584987661,
@@ -98,6 +99,7 @@ export const postsData = [
         photo: X1,
         likeNo: 9906,
         like: false,
+        saved: false,
     },
     {
         id: 1722584155403,
@@ -109,6 +111,7 @@ export const postsData = [
         photo: IOG1,
         likeNo: 350,
         like: false,
+        saved: false,
     },
     {
         id: 1722584987662,
@@ -120,6 +123,7 @@ export const postsData = [
         photo: X2,
         likeNo: 2701,
         like: false,
+        saved: false,
     },
     {
         id: 17225841599994,
@@ -131,6 +135,7 @@ export const postsData = [
         photo: SU4,
         likeNo: 171452,
         like: false,
+        saved: false,
     },
     {
         id: 1722584157308,
@@ -142,6 +147,7 @@ export const postsData = [
         photo: MotoGP,
         likeNo: 1893,
         like: false,
+        saved: false,
     },
     {
         id: 1722584159901,
@@ -153,6 +159,7 @@ export const postsData = [
         photo: cct1,
         likeNo: 28190,
         like: false,
+        saved: false,
     },
     {
         id: 1722584157402,
@@ -164,6 +171,7 @@ export const postsData = [
         photo: WOSPrisonData,
         likeNo: 372,
         like: false,
+        saved: false,
     },
     {
         id: 1722584987663,
@@ -175,6 +183,7 @@ export const postsData = [
         photo: X3,
         likeNo: 57504,
         like: false,
+        saved: false,
     },
     {
         id: 1722584157403,
@@ -186,6 +195,7 @@ export const postsData = [
         photo: WOSLCC,
         likeNo: 227,
         like: false,
+        saved: false,
     },
     {
         id: 1722584157309,
@@ -197,6 +207,7 @@ export const postsData = [
         photo: Vivo,
         likeNo: 3289,
         like: false,
+        saved: false,
     },
     {
         id: 17225841599993,
@@ -208,6 +219,7 @@ export const postsData = [
         photo: SU3,
         likeNo: 131702,
         like: false,
+        saved: false,
     },
     {
         id: 1722584159902,
@@ -219,6 +231,7 @@ export const postsData = [
         photo: cct2,
         likeNo: 53292,
         like: false,
+        saved: false,
     },
     {
         id: 1722584157455,
@@ -230,6 +243,7 @@ export const postsData = [
         photo: WOSWomenPilots,
         likeNo: 227,
         like: false,
+        saved: false,
     },
     {
         id: 1722584159749,
@@ -241,6 +255,7 @@ export const postsData = [
         photo: IOG2,
         likeNo: 582,
         like: false,
+        saved: false,
     },
     {
         id: 17225841599992,
@@ -252,6 +267,7 @@ export const postsData = [
         photo: SU2,
         likeNo: 16017,
         like: false,
+        saved: false,
     },
     {
         id: 1722584159903,
@@ -263,6 +279,7 @@ export const postsData = [
         photo: cct2,
         likeNo: 53292,
         like: false,
+        saved: false,
     },
     {
         id: 17225841573010,
@@ -274,6 +291,7 @@ export const postsData = [
         photo: BSEMarketCap,
         likeNo: 5491,
         like: false,
+        saved: false,
     },
     {
         id: 1722584159755,
@@ -285,6 +303,7 @@ export const postsData = [
         photo: IOG3,
         likeNo: 438,
         like: false,
+        saved: false,
     },
     {
         id: 17225841573011,
@@ -296,6 +315,7 @@ export const postsData = [
         photo: TataLandRover,
         likeNo: 1721,
         like: false,
+        saved: false,
     },
     {
         id: 17225841599991,
@@ -307,5 +327,6 @@ export const postsData = [
         photo: SU1,
         likeNo: 16017,
         like: false,
+        saved: false,
     },
 ]
