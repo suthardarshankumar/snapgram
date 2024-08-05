@@ -11,6 +11,8 @@ export const PostProvider = ({ children }) => {
     const [userData, setUserData] = useState(usersData);
     const [posts, setPosts] = useState(postsData);
     const [savedPosts, setSavedPosts] = useState([]);
+    const [user, setUser] = useState(null);
+    const [userPosts, setUserPosts] = useState([]);
 
     const updateLike = (id) => {
         setPosts(posts.map((post) => {
@@ -35,8 +37,16 @@ export const PostProvider = ({ children }) => {
         setPosts(posts.map((p) => p.id === id ? { ...p, saved: false } : p));
     };
 
+    const getUserData = (username) => {
+        const foundUser = userData.find((user) => user.username === username);
+        const foundUserPosts = posts.filter((post) => post.username === username);
+        setUser(foundUser);
+        setUserPosts(foundUserPosts);
+    };
+
     return (
-        <PostContext.Provider value={{ userData, posts, updateLike, savedPosts, addSave, deleteSave }}>
+        <PostContext.Provider
+            value={{ userData, posts, updateLike, savedPosts, addSave, deleteSave, user, userPosts, getUserData }}>
             {children}
         </PostContext.Provider>
     );

@@ -14,6 +14,10 @@ function srcset(image, size, rows = 1, cols = 1) {
 const Saved = () => {
     const { savedPosts } = usePost();
 
+    if (savedPosts.length === 0) {
+        return <div className='text-slate-50 w-full h-full text-3xl flex justify-center items-center'>No Saved Posts</div>
+    }
+
     return (
         <div
             className='w-full p-5 overflow-y-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#877eff] scrollbar-thumb-rounded-full'>
@@ -22,7 +26,7 @@ const Saved = () => {
                     All Saved Posts
                 </h2>
             </div>
-            <div className='w-full'>
+            <div className='w-full mt-7'>
                 <ImageList
                     sx={{ width: "100%", height: "auto", overflow: "hidden" }}
                     variant="quilted"
