@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { LeftSidebar } from './components/index';
-import { Home, CreatePost, Explore, People, Saved, User } from './pages/index';
+import { Home, CreatePost, Explore, People, Saved, User, Post } from './pages/index';
 
 const App = () => {
   return (
@@ -17,6 +17,7 @@ const App = () => {
           <Route path='/people' element={<People />} />
           <Route path='/saved' element={<Saved />} />
           <Route path='/user/:username' element={<User />} />
+          <Route path='/post/:id' element={<Post />} />
         </Routes>
       </div>
     </div>

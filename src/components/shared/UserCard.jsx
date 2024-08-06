@@ -7,7 +7,7 @@ const UserCard = ({ img, name, username }) => {
                 <img src={img} className='w-full h-full' alt="User profile" />
             </div>
             <div>
-                <div className='text-lg mt-1 font-bold'>{name}</div>
+                <div className='text-lg mt-1 font-bold text-slate-50'>{name}</div>
                 <div className='text-[#7878a3] text-sm -mt-1'>@{username}</div>
             </div>
         </div>

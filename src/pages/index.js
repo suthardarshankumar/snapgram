@@ -4,6 +4,7 @@ import Explore from './Explore'
 import People from './People'
 import Saved from './Saved'
 import User from './User'
+import Post from './Post'
 
 export {
     Home,
@@ -11,5 +12,6 @@ export {
     Explore,
     People,
     Saved,
-    User
+    User,
+    Post
 }
