@@ -1,7 +1,6 @@
 import React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { usePost } from '../../context/PostContext';
 import { Link } from 'react-router-dom';
 
 function srcset(image, size, rows = 1, cols = 1) {
@@ -11,8 +10,8 @@ function srcset(image, size, rows = 1, cols = 1) {
     };
 }
 
-const PostList = () => {
-    const { posts } = usePost();
+const PostList = ({ postsData }) => {
+    const posts = postsData;
 
     return (
         <div className='w-full'>

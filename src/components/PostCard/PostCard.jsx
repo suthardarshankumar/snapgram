@@ -33,9 +33,9 @@ const PostCard = ({
             <UserCard img={profilePic} name={name} username={username} />
             <div>
                 <div className='my-5 leading-6 text-justify'>{caption}</div>
-                <div className='mb-3'>
+                <div className='mb-3 w-full'>
                     {tags.map((tag) => (
-                        <span key={tag} className='mr-2'>
+                        <span key={tag} className='mr-2 inline-block'>
                             #{tag}
                         </span>
                     ))}

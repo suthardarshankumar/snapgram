@@ -1,10 +1,10 @@
 import React from 'react';
-import { PostList } from '../components/index';
+import { Explore as Explored } from '../components/index';
 
 const Explore = () => {
     return (
         <div>
-            <PostList />
+            <Explored />
         </div>
     );
 };
