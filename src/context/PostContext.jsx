@@ -1,5 +1,6 @@
 import React, { useState, createContext, useContext } from 'react';
 import { postsData, usersData } from '../data/data';
+import profileImg from '../assets/User/MainUserProfile.jpg';
 
 export const PostContext = createContext();
 
@@ -13,6 +14,11 @@ export const PostProvider = ({ children }) => {
     const [savedPosts, setSavedPosts] = useState([]);
     const [user, setUser] = useState(null);
     const [userPosts, setUserPosts] = useState([]);
+    const mainUser = {
+        name: "S D",
+        username: "sd5885",
+        profilePic: profileImg
+    };
 
     const updateLike = (id) => {
         setPosts(posts.map((post) => {
@@ -21,7 +27,7 @@ export const PostProvider = ({ children }) => {
                     ...post,
                     like: !post.like,
                     likeNo: post.like ? post.likeNo - 1 : post.likeNo + 1
-                }
+                };
             }
             return post;
         }));
@@ -46,7 +52,7 @@ export const PostProvider = ({ children }) => {
 
     return (
         <PostContext.Provider
-            value={{ userData, posts, updateLike, savedPosts, addSave, deleteSave, user, userPosts, getUserData }}>
+            value={{ userData, posts, setPosts, updateLike, savedPosts, addSave, deleteSave, user, userPosts, getUserData, mainUser }}>
             {children}
         </PostContext.Provider>
     );

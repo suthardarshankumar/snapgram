@@ -1,29 +1,23 @@
-import React from 'react'
-import TextField from '@mui/material/TextField';
+import React from 'react';
 
 const Input = ({
-    label,
+    placeholder,
     value,
     type = "text",
     onChange,
-    sx,
+    className,
     ...props
 }) => {
     return (
-        <>
-            {/* row={6}  multiline */}
-            <TextField
-                id="outlined-basic"
-                variant="outlined"
-                label={label}
-                value={value}
-                type={type}
-                onChange={onChange}
-                sx={sx}
-                {...props}
-            />
-        </>
-    )
+        <input
+            type={type}
+            value={value}
+            placeholder={placeholder}
+            onChange={onChange}
+            {...props}
+            className={`w-full ${className}`}
+        />
+    );
 }
 
-export default Input
+export default Input;

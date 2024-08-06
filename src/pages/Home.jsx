@@ -11,7 +11,7 @@ const Home = () => {
                 <div className='m-0 p-0 mt-8'>
                     <h2 className='font-bold text-4xl'>Home Feed</h2>
                 </div>
-                {posts.map((post) => (
+                {[...posts].reverse().map((post) => (
                     <PostCard
                         key={post.id}
                         name={post.name}

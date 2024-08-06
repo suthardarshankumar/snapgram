@@ -3,6 +3,7 @@ import { usePost } from '../context/PostContext';
 import { PostList } from '../components/index';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import { Link } from 'react-router-dom';
 
 function srcset(image, size, rows = 1, cols = 1) {
     return {
@@ -39,12 +40,14 @@ const Saved = () => {
                                 cursor: "pointer"
                             }
                         }}>
-                            <img
-                                {...srcset(post.photo, 330)}
-                                alt={post.caption}
-                                loading="lazy"
-                                className='w-full h-full object-contain'
-                            />
+                            <Link to={`/post/${post.id}`}>
+                                <img
+                                    {...srcset(post.photo, 330)}
+                                    alt={post.caption}
+                                    loading="lazy"
+                                    className='w-full h-full object-contain'
+                                />
+                            </Link>
                         </ImageListItem>
                     ))}
                 </ImageList>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { UserCard } from '../index';
+import { usePost } from '../../context/PostContext';
 import logo from '../../assets/Logo/logo.svg';
-import profileImg from '../../assets/User/MainUserProfile.jpg';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
 import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
@@ -10,6 +10,8 @@ import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlin
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
 
 const LeftSidebar = () => {
+    const { mainUser } = usePost()
+
     const SidebarIcons = [
         {
             icon: <HomeOutlinedIcon />,
@@ -50,9 +52,9 @@ const LeftSidebar = () => {
             </div>
             <div className='w-full mt-11'>
                 <UserCard
-                    img={profileImg}
-                    name="S D"
-                    username="sd58"
+                    img={mainUser.profilePic}
+                    name={mainUser.name}
+                    username={mainUser.username}
                 />
             </div>
             <div className='w-full mt-10 px-[6px]'>
