@@ -29,7 +29,6 @@ This is a social media application built with React, Tailwind CSS, Material-UI, 
    git clone https://github.com/yourusername/social-media-app.git
    cd social-media-app
    ```
-````
 
 2. **Install dependencies:**
 
