@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { LeftSidebar } from './components/index';
-import { Home, CreatePost, Explore, People, Saved, User, Post } from './pages/index';
+import { LeftSidebar, EditPage, UserProfile } from './components/index';
+import { Home, CreatePost, Explore, People, Saved, User, Post, Profile } from './pages/index';
 
 const App = () => {
   return (
@@ -18,6 +18,10 @@ const App = () => {
           <Route path='/saved' element={<Saved />} />
           <Route path='/user/:username' element={<User />} />
           <Route path='/post/:id' element={<Post />} />
+          <Route path='/profile' element={<Profile />}>
+            <Route index element={<UserProfile />} />
+            <Route path='edit-page' element={<EditPage />} />
+          </Route>
         </Routes>
       </div>
     </div>

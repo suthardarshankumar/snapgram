@@ -59,8 +59,6 @@ const CreatePost = () => {
             saved: false
         };
 
-        console.log("Form Data:", formData);
-
         setPosts([...posts, formData]);
         setCaption('');
         setTags('');

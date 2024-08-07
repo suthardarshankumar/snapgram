@@ -7,6 +7,8 @@ import Explore from './Explore/Explore.jsx';
 import UsersProfile from './User/UsersProfile.jsx'
 import PostDetails from "./shared/PostDetails.jsx";
 import PostList from "./shared/PostList.jsx";
+import UserProfile from './Profile/UserProfile'
+import EditPage from './Profile/EditPage'
 
 export {
     LeftSidebar,
@@ -17,5 +19,7 @@ export {
     Explore,
     UsersProfile,
     PostDetails,
-    PostList
+    PostList,
+    UserProfile,
+    EditPage
 }

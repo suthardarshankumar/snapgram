@@ -5,6 +5,7 @@ import People from './People'
 import Saved from './Saved'
 import User from './User'
 import Post from './Post'
+import Profile from './Profile'
 
 export {
     Home,
@@ -13,5 +14,6 @@ export {
     People,
     Saved,
     User,
-    Post
+    Post,
+    Profile,
 }

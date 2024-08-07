@@ -51,11 +51,14 @@ const LeftSidebar = () => {
                 </NavLink>
             </div>
             <div className='w-full mt-11'>
-                <UserCard
-                    img={mainUser.profilePic}
-                    name={mainUser.name}
-                    username={mainUser.username}
-                />
+                <NavLink
+                    to='/profile'>
+                    <UserCard
+                        img={mainUser.profilePic}
+                        name={mainUser.name}
+                        username={mainUser.username}
+                    />
+                </NavLink>
             </div>
             <div className='w-full mt-10 px-[6px]'>
                 {SidebarIcons.map((icons, index) => (

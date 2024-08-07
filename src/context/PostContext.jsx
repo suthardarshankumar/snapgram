@@ -14,11 +14,17 @@ export const PostProvider = ({ children }) => {
     const [savedPosts, setSavedPosts] = useState([]);
     const [user, setUser] = useState(null);
     const [userPosts, setUserPosts] = useState([]);
-    const mainUser = {
+    const [mainUser, setMainUser] = useState({
         name: "S D",
         username: "sd5885",
-        profilePic: profileImg
-    };
+        profilePic: profileImg,
+        follower: 175,
+        following: 196,
+        bio: "🔒 Bio unavailable"
+    });
+
+    const mainUserPostNo = posts.filter((p) => p.username === mainUser.username);
+    mainUser.postNo = mainUserPostNo.length;
 
     const updateLike = (id) => {
         setPosts(posts.map((post) => {
@@ -52,7 +58,21 @@ export const PostProvider = ({ children }) => {
 
     return (
         <PostContext.Provider
-            value={{ userData, posts, setPosts, updateLike, savedPosts, addSave, deleteSave, user, userPosts, getUserData, mainUser }}>
+            value={{
+                userData,
+                posts,
+                setPosts,
+                updateLike,
+                savedPosts,
+                addSave,
+                deleteSave,
+                user,
+                userPosts,
+                getUserData,
+                mainUser,
+                setMainUser
+            }}
+        >
             {children}
         </PostContext.Provider>
     );
