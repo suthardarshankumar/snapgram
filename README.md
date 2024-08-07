@@ -1,5 +1,5 @@
 ````markdown
-# Social Media App
+Social Media App
 
 ## Overview
 
