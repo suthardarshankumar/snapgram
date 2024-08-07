@@ -1,4 +1,3 @@
-````markdown
 Social Media App
 
 ## Overview
@@ -97,7 +96,3 @@ src
 ### Post Details
 
 - Displays detailed information about a single post, including the post's caption, tags, photo, and like count.
-
-```
-
-```
